@@ -34,9 +34,9 @@ const USERNAME = 'grohsfabian';
 
     let widgets = {};
 
-    $('div[class="user-sidebar"]').each((index, element) => {
+    $('div[class="user-sidebar"] > div[class="widget"]').each((index, element) => {
        let header = $(element).find('header').text().trim();
-        widgets[header] = $(element).find('div[class="widget-body"] > p').text().trim();
+       widgets[header] = $(element).find('div[class="widget-body"]').text().trim();
     });
 
     console.log(name, avatar, description, 'Socials:', socials, 'Details:', details, 'Stats:', statistics, 'Widgets:', widgets);
